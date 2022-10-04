@@ -1,0 +1,7 @@
+name: Eventman
+version: '${version}'
+main: eventmanager.eventman.Eventman
+api-version: 1.19
+authors: [ pi16, thevepex_ ]
+description: EventManager
+website: pitforge.org

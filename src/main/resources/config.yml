@@ -1,0 +1,183 @@
+# EventManager config.yml
+# use /em reload -y to reload
+
+JoinMessage: ''
+LeaveMessage: ''
+
+
+# Interesting for Lobby/Hub
+#
+#
+#
+#
+#   or:
+deactivate-player-damage:
+deactivate-player-fighting:
+deactivate-player-hunger:
+deactivate-destroying-blocks:
+  deactivate-destroying-blocks-for-ops:
+deactivate-placing-blocks:
+  deactivate-placing-blocks-ops:
+deactivate-item-dropping:
+  deactivate-item-dropping-for-ops:
+
+
+
+
+
+prefix: '&byolo'
+send-startup-message-in-console: true
+send-message-if-denied: false
+send-alerts-to-op: false
+
+
+
+
+### Redstone Events ###
+
+BlockRedstoneEvent:
+BlockPistonEvent:
+  BlockPistonExtendEvent:
+  BlockPistonRetractEvent:
+
+
+
+
+### Player Events ###
+
+PlayerItemBreakEvent:
+PlayerItemConsumeEvent:
+PlayerItemDamageEvent:
+PlayerDropItemEvent:
+
+PlayerInteractAtEntityEvent:
+PlayerInteractEvent:
+
+PlayerChatEvent:
+PlayerChatTabCompleteEvent:
+PlayerCommandSendEvent:
+
+PlayerBedEnterEvent:
+PlayerBedLeaveEvent:
+
+PlayerBucketEmptyEvent:
+PlayerBucketEntityEvent:
+PlayerBucketEvent:
+PlayerBucketFillEvent:
+PlayerBucketFishEvent:
+PlayerFishEvent:
+
+PlayerEditBookEvent:
+
+PlayerEggThrowEvent:
+PlayerExpChangeEvent:
+PlayerHarvestBlockEvent:
+
+PlayerLevelChangeEvent:
+PlayerLocaleChangeEvent:
+PlayerPickupArrowEvent:
+PlayerPickupItemEvent:
+PlayerTeleportEvent:
+
+PlayerToggleFlightEvent:
+PlayerToggleSneakEvent:
+PlayerToggleSprintEvent:
+
+
+
+
+### Block Events ###
+
+BlockPlaceEvent:
+BlockDropItemEvent:
+BlockExpEvent:
+#  BlockExpEvent is called when sp. a Diamond Ore Block yields exp.
+BlockBreakEvent:
+BlockBurnEvent:
+BlockCanBuildEvent:
+#  BlockCanBuildEvent is called when a player tries to place a block.
+BlockCookEvent:
+BlockDamageEvent:
+BlockFadeEvent:
+BlockFertilizeEvent:
+BlockFormEvent:
+#  BlockFormEvent is called when "[..]a block is formed or spreads based on world conditions.".
+BlockFromToEvent:
+#  BlockFromToEvent only applies to liquids and the enderdragone egg.
+BlockGrowEvent:
+BlockIgniteEvent:
+#  BlockIgniteEvent is called when a player commits arson.
+BlockPhysicsEvent:
+#  BlockPhysicsEvent is called when a player places sand/gravel/etc. .
+NotePlayEvent:
+#  Noteblock*
+
+
+
+### Entity Events ###  ALSO APPLIES TO PLAYERS
+
+AreaEffectCloudApplyEvent:
+ArrowBodyCountChangeEvent:
+BatToggleSleepEvent:
+CreatureSpawnEvent:
+
+CreeperPowerEvent:
+
+EntityBreakDoorEvent:
+EntityBreedEvent:
+
+EntityDamageByBlockEvent:
+EntityDamageByEntityEvent:
+EntityDamageEvent:
+EntityDeathEvent:
+EntityDropItemEvent:
+EntityExplodeEvent:
+
+EntityPortalEnterEvent:
+EntityPortalExitEvent:
+
+ItemDespawnEvent:
+#  ItemDespawnEvent is being called when an Item has existed for 5 minutes already
+
+ItemSpawnEvent:
+SpawnerSpawnEvent:
+
+VillagerAcquireTradeEvent:
+VillagerCareerChangeEvent:
+
+
+### Inventory Events###
+
+InventoryCreativeEvent:
+#  InventoryCreativeEvent is being called when a player in Creative-mode picks up Items from the creative-menu
+  send-message-to-op: '%player% has just given himself %amount%x %item% ! :0 '
+CraftItemEvent:
+FurnaceSmeltEvent:
+FurnaceBurnEvent:
+#  FurnaceSmeltEvent is being called when something is being used as fuel in a furnace
+InventoryClickEvent:
+
+
+
+### Server Events ###
+
+PluginDisableEvent:
+  broadcast-message: false
+  send-message-to-op: '%plugin% has been disabled !'
+
+
+
+### Weather Events ###
+
+LightningStrikeEvent:
+WeatherChangeEvent:
+ThunderChangeEvent:
+
+
+
+
+
+### Echantment Events ###
+
+EnchantItemEvent:
+PrepareItemEnchantEvent:
