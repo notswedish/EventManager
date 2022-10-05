@@ -1,28 +1,42 @@
 # EventManager config.yml
-# use /em reload -y to reload
+
+#Placeholders:
+# Use common sense, a player event doesn't have %plugin% placeholder
+# %player%  -> Player(entity)-based Events
+# %plugin%  -> Server-based Events
+#
+
+
+### !!!!! If you dont want any messages just leave '' blank ###
+
+#em removed in v1.2
+#em reload messages:
+#em-reload: '&areloaded...'
+#em-missing-permission: '&7Insufficient permissions.'
+#em-wrong-syntax: '&7Wrong Syntax ! You meant /em reload -y  ?'
 
 JoinMessage: ''
 LeaveMessage: ''
 
 
-# Interesting for Lobby/Hub
+# Interesting for Lobby/Hub #
 #
 #
-#
-#
-#   or:
-deactivate-player-damage:
-deactivate-player-fighting:
-deactivate-player-hunger:
-deactivate-destroying-blocks:
-  deactivate-destroying-blocks-for-ops:
-deactivate-placing-blocks:
-  deactivate-placing-blocks-ops:
-deactivate-item-dropping:
-  deactivate-item-dropping-for-ops:
+deactivate-player-damage:              false
+deactivate-player-fighting:            false
+deactivate-player-hunger:              false
 
+deactivate-destroying-blocks:          false
+deactivate-destroying-blocks-for-ops:  false
 
+deactivate-placing-blocks:             false
+deactivate-placing-blocks-ops:         false
 
+deactivate-item-dropping:              false
+deactivate-item-dropping-for-ops:      false
+#
+#
+# Interesting for Lobby/Hub #
 
 
 prefix: '&byolo'
@@ -36,9 +50,10 @@ send-alerts-to-op: false
 ### Redstone Events ###
 
 BlockRedstoneEvent:
+
 BlockPistonEvent:
-  BlockPistonExtendEvent:
-  BlockPistonRetractEvent:
+BlockPistonExtendEvent:
+BlockPistonRetractEvent:
 
 
 
@@ -150,7 +165,7 @@ VillagerCareerChangeEvent:
 
 InventoryCreativeEvent:
 #  InventoryCreativeEvent is being called when a player in Creative-mode picks up Items from the creative-menu
-  send-message-to-op: '%player% has just given himself %amount%x %item% ! :0 '
+send-message-to-op: '%player% has just given himself %amount%x %item% ! :0 '
 CraftItemEvent:
 FurnaceSmeltEvent:
 FurnaceBurnEvent:
@@ -161,9 +176,9 @@ InventoryClickEvent:
 
 ### Server Events ###
 
-PluginDisableEvent:
-  broadcast-message: false
-  send-message-to-op: '%plugin% has been disabled !'
+PluginDisableEvent: Cant Disable o.O
+-broadcast-message: 'disabled'
+-send-message-to-op: 'disabled2'
 
 
 
@@ -172,8 +187,6 @@ PluginDisableEvent:
 LightningStrikeEvent:
 WeatherChangeEvent:
 ThunderChangeEvent:
-
-
 
 
 
